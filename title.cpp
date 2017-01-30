@@ -11,7 +11,7 @@ using namespace std;
 void delt(Student* student, Node* &head);
 void add(Student* student,Node* &head);
 void print(Node* head);
-int average();
+void average(Student* student);
 int main(){
   Node* head = NULL;
   //head = new Node(); stuff needs to be added here
@@ -24,13 +24,15 @@ int main(){
     cout << "Input a command(add,print,delete,quit,average)" << endl;
     cin >> input;
     if(strcmp(input,"add") == 0){
-      add();
+      //new student
+      Student* newstudent = new Student(fname,lname,id,gpa);
+      add(newstudent,head);
     }
     if(strcmp(input,"input") == 0){
       print();
     }
     if(strcmp(input,"delete") == 0){
-      delt();
+      delt(newstudent,head);
     }
     if(strcmp(input,"quit") == 0){
       //have to delete all the new stuff here
@@ -42,16 +44,25 @@ int main(){
   }
   return 0;
 }
-void add(Student* student,Node* &head){
-  
+//add funciton
+void add(newstudent,Node* &head){
+  cout << "Input Information: first name, last name, id , gpa" << endl;
+  cin >> newstudent->fname;
+  cin >> newstudent->lname;
+  cin >> newstudent->id;
+  cin >> newstudent->gpa;
+  head->setStudent(newstudent);
 }
+//delete function
 void delt(Student* student,Node* &head){
   
 }
+//print function
 void print(Node* head){
-
+   
 }
-int average(){
+//averaging GPAs
+void average(Student* student){
   int gpa = 0;
   //code goes in here
   return gpa;
