@@ -1,4 +1,4 @@
-//Colin Aslett, node header file 
+//Colin Aslett, node header file
 #include <iostream>
 #include <string.h>
 #include "student.h"
@@ -12,7 +12,8 @@ class Node {
   Node* getNext(); //gets the next Node pointer
   Student* getStudent(); //gets the Student pointer the Node has
   void setNext(Node*); //sets the next Node pointer
-  void setStudent(Student*); //sets the Student* in the node
+  void setStudent(Student*);
+  //sets the Student* in the node
  private:
   Node* next;
   Student* student;
